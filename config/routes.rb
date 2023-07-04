@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "/", to: "welcome#index"
 
   get "/sheds", to: "sheds#index"
+  get "/sheds/new", to: "sheds#new"
+  get "/sheds/:id", to: "sheds#show"
 end
