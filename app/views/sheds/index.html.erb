@@ -1,0 +1,8 @@
+<h1>Sheds</h1>
+
+<% @sheds.each do |shed| %>
+  <h3><a href="/sheds/<%= shed.id %>"><%= shed.name %></a></h3>
+  <p><%= shed.city %></p>
+  <p><%= shed.color %></p>
+  
+<% end %>
