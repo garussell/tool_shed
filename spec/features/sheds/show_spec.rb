@@ -7,6 +7,7 @@ RSpec.describe "the sheds show page" do
       it "displays id and attributes for each shed" do
         shed = Shed.create!(name: "Large One", city: "Denver", color: "Azul", space_available: true)
         shed_2 = Shed.create!(name: "Small One", city: "Boulder", color: "Green", space_available: false)
+        
         visit "/sheds/#{shed.id}"
 
         expect(page).to have_content(shed.name)

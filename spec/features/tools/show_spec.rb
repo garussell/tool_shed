@@ -9,8 +9,11 @@ RSpec.describe "the tools show page" do
         tool = shed.tools.create!(shed_id: 2, quantity: 4, tool_name: "Screwdriver", description: "Flat head", available: true)
 
         visit "/tools/#{tool.id}"
-
-
+# save_and_open_page
+        expect(page).to have_content(tool.shed_id)
+        expect(page).to have_content(tool.tool_name)
+        expect(page).to have_content(tool.description)
+        expect(page).to have_content(tool.available)
       end
     end
   end
