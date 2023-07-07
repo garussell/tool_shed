@@ -1,0 +1,16 @@
+<a href="/sheds">Back to Sheds</a>
+
+<form action="/sheds" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Add Shed Name:</p>
+  <input type='text' name='shed[name]'/><br/>
+  <p>Add City Name:</p>
+  <input type='text' name='shed[city]'/><br/>
+  <p>What color is it?</p>
+  <input type='text' name='shed[color]'/><br/>
+  <p>Check the box if there is space available:</p>
+  <input type='checkbox' name='shed[space_available]'/><br/>
+  <input type='submit' value='Create Shed'/>
+</form>
+
+
