@@ -1,0 +1,11 @@
+<h1> Tools of <%= @shed.name %></h1>
+
+<% @tools.each do |tool| %>
+
+  <p> Name: <a href="/tools/<%= tool.id %>"><%= tool.tool_name %></a></p>
+  <p> Description: <%= tool.description %></p>
+  <p> Available: <%= tool.available %></p>
+
+<% end %>
+
+<a href="/sheds">Back to Sheds</a>
