@@ -2,7 +2,7 @@
 
 <% @tools.each do |tool| %>
 
-  <p> Name: <%= tool.tool_name %></p>
+  <p> Name: <a href="/tools/<%= tool.id %>"><%= tool.tool_name %></a></p>
   <p> Description: <%= tool.description %></p>
   <p> Available: <%= tool.available %></p>
 

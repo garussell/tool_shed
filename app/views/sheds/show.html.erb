@@ -6,6 +6,7 @@
     <p>City: <%= @sheds.city %></p>
     <p>Color: <%= @sheds.color %></p>
     <p>Space Available: <%= @sheds.space_available %></p>
+    <p>Number of Tools in <%= @sheds.name %>: <%= @sheds.tools.count %>
 
     <h2><a href="/sheds/<%= @sheds.id %>/tools">List of Tools</a></h2>
 
