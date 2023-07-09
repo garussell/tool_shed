@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 # tools
   get "/tools", to: "tools#index"
   get "/tools/:id", to: "tools#show"
-  
+# shed_tools
   get "/sheds/:id/tools", to: "shed_tools#index"
   get "/sheds/:id/tools/:id", to: "shed_tools#show"
 end
