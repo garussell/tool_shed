@@ -1,12 +1,10 @@
 <p><a href="/tools">Complete List of Tools</a></p>
 
-<h1>Welcome to the Shed</h1>
-<h2>Actions</h2>
-    <ul>
-        <li><a href="/sheds/new">New Shed</a></li>
-    </ul>
+<h1>Welcome to the Workshop Collective</h1>
+<a href="/sheds/new">New Shed</a>
 
-<h2>Sheds</h2>
+
+<h2>One Shed, Many Tools</h2>
 <% @sheds.each do |shed| %>
   
     <h3><a href="/sheds/<%= shed.id %>"><%= shed.name %></a></h3>
