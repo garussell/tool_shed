@@ -12,13 +12,13 @@ class ShedsController < ApplicationController
   end
 
   def create
-    shed = Shed.new({
-      name: params[:shed][:name],
-      city: params[:shed][:city],
-      color: params[:shed][:color],
-      space_available: params[:shed][:space_available]
-      })
-    shed.save
+    shed = Shed.create(shed_params)
     redirect_to '/sheds'
   end
+
+  private
+  
+  def shed_params
+    params.require(:shed).permit(:name, :city, :color, :space_available)
+  end  
 end
