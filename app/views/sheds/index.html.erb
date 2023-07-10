@@ -8,6 +8,7 @@
 <% @sheds.each do |shed| %>
   
     <h3><a href="/sheds/<%= shed.id %>"><%= shed.name %></a></h3>
+    <p><%= button_to "Update #{shed.name}", "/sheds/#{shed.id}/edit", method: :get %></p>
     <p>Hosting tools since: <%= shed.created_at %></p>
 
 <% end %>

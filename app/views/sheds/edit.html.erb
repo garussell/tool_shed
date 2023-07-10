@@ -1,0 +1,14 @@
+<a href="/sheds">Back to Sheds</a>
+
+<%= form_with model: @sheds, url: "/sheds/#{params[:id]}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br/>
+  <%= form.label :city %>
+  <%= form.text_field :city %><br/>
+  <%= form.label :color %>
+  <%= form.text_field :color %><br/>
+  <%= form.label :space_available %>
+  <%= form.check_box :space_available %><br/>
+  <%= form.submit "Update Shed" %>
+<% end %>
+

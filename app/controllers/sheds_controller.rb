@@ -16,6 +16,16 @@ class ShedsController < ApplicationController
     redirect_to '/sheds'
   end
 
+  def edit
+    @sheds = Shed.find(params[:id])
+  end
+
+  def update
+    shed = Shed.find(params[:id])
+    shed.update(shed_params)
+    redirect_to '/sheds'
+  end
+
   private
   
   def shed_params

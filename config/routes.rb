@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "/sheds/new", to: "sheds#new"
   post "/sheds", to: "sheds#create"
   get "/sheds/:id", to: "sheds#show"
+  get "/sheds/:id/edit", to: "sheds#edit"
+  patch "/sheds/:id", to: "sheds#update"
 # tools
   get "/tools", to: "tools#index"
   get "/tools/:id", to: "tools#show"
