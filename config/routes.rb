@@ -16,5 +16,9 @@ Rails.application.routes.draw do
   get "/tools/:id", to: "tools#show"
 # shed_tools
   get "/sheds/:id/tools", to: "shed_tools#index"
+  get "/sheds/:id/tools/new", to: "shed_tools#new"
   get "/sheds/:id/tools/:id", to: "shed_tools#show"
+  post "/sheds/:id/tools", to: "shed_tools#create"
+  # get "/sheds/:id/tools/edit", to: "shed_tools#edit"
+  # patch "/sheds/:id/tools/:id", to: "shed_tools#update"
 end

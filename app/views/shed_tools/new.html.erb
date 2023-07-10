@@ -1,0 +1,15 @@
+<a href="/sheds">Back to Sheds</a>
+
+<%= form_with url: "/sheds/#{params[:id]}/tools", method: :post, local: true do |form| %>
+  
+  <p>How Many?</p>
+  <%= form.number_field :quantity %><br/>
+  <p>Add Tool Name:</p>
+  <%= form.text_field :tool_name %><br/>
+  <p>Description:</p>
+  <%= form.text_field :description %><br/>
+  <p>Check the box if tool is available to use:</p>
+  <%= form.check_box :available %><br/><br/>
+  <%= form.submit "Create Tool" %>
+
+<% end %>
