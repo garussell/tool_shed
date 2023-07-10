@@ -1,12 +1,12 @@
 <a href="/sheds">Back to Sheds</a>
 
-  <h1><%= @sheds.name %></h1>
+  <h1><%= @shed.name %></h1>
+    <p><%= button_to "Update #{@shed.name}", "/sheds/#{@shed.id}/edit", method: :get %></p>
+    <p>Shed ID: <%= @shed.id %></p>  
+    <p>City: <%= @shed.city %></p>
+    <p>Color: <%= @shed.color %></p>
+    <p>Space Available: <%= @shed.space_available %></p>
+    <p>Number of Tools in <%= @shed.name %>: <%= @shed.tools.count %>
 
-    <p>Shed ID: <%= @sheds.id %></p>  
-    <p>City: <%= @sheds.city %></p>
-    <p>Color: <%= @sheds.color %></p>
-    <p>Space Available: <%= @sheds.space_available %></p>
-    <p>Number of Tools in <%= @sheds.name %>: <%= @sheds.tools.count %>
-
-  <h2><a href="/sheds/<%= @sheds.id %>/tools">List of Tools</a></h2>
+  <h2><a href="/sheds/<%= @shed.id %>/tools">List of Tools</a></h2>
 

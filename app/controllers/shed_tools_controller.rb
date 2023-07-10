@@ -9,14 +9,13 @@ class ShedToolsController < ApplicationController
 
   def create
     shed = Shed.find(params[:id])
-    tool = shed.tools.create(tools_params)
+    tool = shed.tools.create(tool_params)
     redirect_to "/sheds/#{shed.id}/tools"
   end
-  
 
   private
 
-  def tools_params
+  def tool_params
     params.permit(:quantity, :tool_name, :description, :available)
   end
 end

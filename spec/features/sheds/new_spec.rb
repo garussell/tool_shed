@@ -12,9 +12,9 @@ RSpec.describe 'create sheds' do
   it 'can create a new shed' do
     visit '/sheds/new'
 
-    fill_in('shed[name]', with: 'Boondock')
-    fill_in('shed[city]', with: 'Berthoud')
-    fill_in('shed[color]', with: 'Brown')
+    fill_in('name', with: 'Boondock')
+    fill_in('city', with: 'Berthoud')
+    fill_in('color', with: 'Brown')
     click_button('Create Shed')
 
     expect(current_path).to eq("/sheds")

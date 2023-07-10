@@ -19,8 +19,6 @@ RSpec.describe Shed do
         expect(ordered_sheds[1].id).to eq(@shed2.id)
         expect(ordered_sheds.last.id).to eq(@shed1.id)
       end
-
-      it "shows when the shed was created next to each shed" # this might be a test for views because it wasn't part of the shed.show method
     end
   end
 end
