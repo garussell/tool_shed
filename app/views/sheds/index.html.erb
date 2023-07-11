@@ -3,14 +3,13 @@
 <h1>The Workshop Collective</h1>
 <a href="/sheds/new">New Shed</a>
 
-
 <h2>One Shed, Many Tools</h2>
+
 <% @shed.each do |shed| %>
     
-    <h3><a href="/sheds/<%= shed.id %>"><%= shed.name %></a></h3>
-    <p>Hosting tools since: <%= shed.created_at %></p>
-
+    <h3><%= link_to shed.name, "/sheds/#{shed.id}" %></h3>
     <p><%= link_to "Update", "/sheds/#{shed.id}/edit", method: :get %></p>
+    <p>Hosting tools since: <%= shed.created_at %></p>
 
 <% end %>
 

@@ -1,5 +1,10 @@
 <h1><%= @shed.name %></h1>
-  <p><%= button_to "Update #{@shed.name}", "/sheds/#{@shed.id}/edit", method: :get %></p>
+
+  <p>
+    <%= button_to "Update #{@shed.name}", "/sheds/#{@shed.id}/edit", method: :get %>
+    <%= button_to "Delete #{@shed.name}", "/sheds/#{@shed.id}", method: :delete %>
+  </p>
+
   <p>Shed ID: <%= @shed.id %></p>  
   <p>City: <%= @shed.city %></p>
   <p>Color: <%= @shed.color %></p>

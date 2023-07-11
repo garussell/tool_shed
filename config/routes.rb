@@ -11,9 +11,11 @@ Rails.application.routes.draw do
   get "/sheds/:id", to: "sheds#show"
   get "/sheds/:id/edit", to: "sheds#edit"
   patch "/sheds/:id", to: "sheds#update"
+  delete "/sheds/:id", to: "sheds#destroy"
   # tools
   get "/tools", to: "tools#index"
   get "/tools/:id", to: "tools#show"
+  delete "/tools/:id", to: "tools#destroy"
   # shed_tools
   get "/sheds/:id/tools/sort_alphabetically", to: "shed_tools#sort_alphabetically"
   get "/sheds/:id/tools", to: "shed_tools#index"
