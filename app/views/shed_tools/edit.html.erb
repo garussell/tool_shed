@@ -1,0 +1,13 @@
+<%= form_with url: "/tools/#{@tools.id}", method: :patch, local: true do |form| %>
+
+  <%= form.label :quantity, "How Many?" %>
+  <%= form.number_field :quantity %><br/>
+  <%= form.label :tool_name, "Tool Name:" %>
+  <%= form.text_field :tool_name %><br/>
+  <%= form.label :description, "Description:" %>
+  <%= form.text_field :description %><br/>
+  <%= form.label :available, "Check Box if Available" %>
+  <%= form.check_box :available %><br/><br/>
+  <%= form.submit "Update Tool" %>
+
+<% end %>

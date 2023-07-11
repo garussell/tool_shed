@@ -1,11 +1,12 @@
-<a href="/sheds">Back to Sheds</a>
-
 <h1>The Tools</h1>
 
 <% @tools.each do |tool| %>
   <h3><a href="/tools/<%= tool.id %>"><%= tool.tool_name %></a></h3>
     <p>Description: <%= tool.description %></p>
     <p>Available: <%= tool.available %>
-  <% end %>
+
+    <p><%= link_to "Update", "/tools/#{tool.id}/edit", method: :get %></p>
+<% end %>
+
 
 
