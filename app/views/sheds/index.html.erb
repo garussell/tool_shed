@@ -6,9 +6,11 @@
 
 <h2>One Shed, Many Tools</h2>
 <% @shed.each do |shed| %>
-  
+    
     <h3><a href="/sheds/<%= shed.id %>"><%= shed.name %></a></h3>
     <p>Hosting tools since: <%= shed.created_at %></p>
+
+    <p><%= link_to "Update", "/sheds/#{shed.id}/edit", method: :get %></p>
 
 <% end %>
 
