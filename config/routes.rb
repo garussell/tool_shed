@@ -14,11 +14,11 @@ Rails.application.routes.draw do
 # tools
   get "/tools", to: "tools#index"
   get "/tools/:id", to: "tools#show"
-# shed_tools
+  # shed_tools
   get "/sheds/:id/tools", to: "shed_tools#index"
   get "/sheds/:id/tools/new", to: "shed_tools#new"
   get "/sheds/:id/tools/:id", to: "shed_tools#show"
   post "/sheds/:id/tools", to: "shed_tools#create"
-  # get "/sheds/:id/tools/edit", to: "shed_tools#edit"
-  # patch "/sheds/:id/tools/:id", to: "shed_tools#update"
+  get "/tools/:id/edit", to: "shed_tools#edit"
+  patch "/tools/:id", to: "shed_tools#update"
 end
