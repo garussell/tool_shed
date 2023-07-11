@@ -3,7 +3,8 @@
 <%= link_to "Sort Alphabetically", "/sheds/#{@shed.id}/tools/sort_alphabetically" %><br><br>
 
 <% @tools.each do |tool| %>
-  <%= link_to "Update Tool", "/tools/#{tool.id}/edit" %><br>
+  <%= link_to "Update Tool", "/tools/#{tool.id}/edit" %>
+
   <p> Name: <a href="/tools/<%= tool.id %>"><%= tool.tool_name %></a></p>
   <p> Description: <%= tool.description %></p>
   <p> Available: <%= tool.available %></p>

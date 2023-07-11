@@ -25,6 +25,13 @@ class ShedsController < ApplicationController
     redirect_to "/sheds/#{shed.id}"
   end
 
+  def destroy
+    shed = Shed.find(params[:id])
+    shed.tools.destroy_all
+    shed.destroy
+    redirect_to "/sheds"
+  end
+
   private
   
   def shed_params
