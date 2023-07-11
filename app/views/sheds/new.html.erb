@@ -1,7 +1,6 @@
-<a href="/sheds">Back to Sheds</a>
-
 <%= form_with url: "/sheds", method: :post, local: true do |form| %>
   <%= form.hidden_field :authenticity_token, value: form_authenticity_token %>
+  
   <p>Add Shed Name:</p>
   <%= form.text_field :name %><br/>
   <p>Add City Name:</p>
@@ -11,6 +10,7 @@
   <p>Check the box if there is space available:</p>
   <%= form.check_box :space_available %><br/>
   <%= form.submit 'Create Shed' %>
+
 <% end %>
 
 

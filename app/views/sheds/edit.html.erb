@@ -1,5 +1,3 @@
-<a href="/sheds">Back to Sheds</a>
-
 <%= form_with url: "/sheds/#{params[:id]}", method: :patch, local: true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %><br/>
