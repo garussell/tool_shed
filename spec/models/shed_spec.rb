@@ -11,9 +11,9 @@ RSpec.describe Shed do
     end
   
     # User Story 6
-    describe "#order_by_most_recent" do
+    describe "#order by most recent" do
       it "orders sheds by the most recently created" do
-        ordered_sheds = Shed.order_by_most_recent
+        ordered_sheds = Shed.order(created_at: :desc)
       
         expect(ordered_sheds.first.id).to eq(@shed3.id)
         expect(ordered_sheds[1].id).to eq(@shed2.id)

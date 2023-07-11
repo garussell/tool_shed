@@ -1,7 +1,6 @@
 class ShedsController < ApplicationController
   def index
-    # @shed = Shed.all
-    @shed = Shed.order_by_most_recent
+    @shed = Shed.order(created_at: :desc)
   end
 
   def show
