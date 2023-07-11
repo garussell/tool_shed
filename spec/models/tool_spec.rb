@@ -8,7 +8,7 @@ RSpec.describe Tool do
     # Woodworking Shop
       @wood_shop = Shed.create!(name: "Woodworking Shop", city: "Denver", color: "Yellow", space_available: true)
 
-      # Woodworking Tools
+    # Woodworking Tools
       @square = @wood_shop.tools.create!(shed_id: 1, quantity: 1, tool_name: "Combination Square", description: "A tool used to measure right angles", available: true)
       @tape_measure = @wood_shop.tools.create!(shed_id: 1, quantity: 2, tool_name: "Tape Measure", description: "A useful tool to measure lengths", available: true)
       @dovetail_saw = @wood_shop.tools.create!(shed_id: 1, quantity: 1, tool_name: "Dovetail Saw", description: "A saw for cutting dovetails", available: false)

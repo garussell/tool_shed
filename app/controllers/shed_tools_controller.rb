@@ -7,7 +7,6 @@ class ShedToolsController < ApplicationController
   def new
   end
 
-  
   def create
     shed = Shed.find(params[:id])
     tool = shed.tools.create(tool_params)
@@ -24,6 +23,12 @@ class ShedToolsController < ApplicationController
     redirect_to "/tools/#{tool.id}"
   end
 
+  def sort_alphabetically
+    @shed = Shed.find(params[:id])
+    @tools = @shed.tools.order(:tool_name)
+    render 'index'
+  end
+  
   private
 
   def tool_params
